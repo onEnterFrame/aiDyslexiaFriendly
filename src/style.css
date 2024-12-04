@@ -1,0 +1,49 @@
+@import "./assets/fonts/OpenDyslexic.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    font-family: theme("fontFamily.dyslexic");
+    line-height: 1.5;
+    font-weight: 400;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    --foreground-rgb: theme("colors.gray.800");
+    --background-rgb: theme("colors.cream");
+  }
+
+  body {
+    font-size: 1.125rem;
+    color: var(--foreground-rgb);
+    background: linear-gradient(to bottom, transparent, var(--background-rgb))
+      var(--background-rgb);
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: "OpenDyslexic";
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: theme("colors.cream", #fff8e7);
+    border-radius: 8px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: theme("colors.gray.500", #f5e6d3);
+    border-radius: 8px;
+  }
+
+  .bg-cream {
+    background-color: var(--background-rgb);
+  }
+}
